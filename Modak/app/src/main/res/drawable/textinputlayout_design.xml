@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:name="android:textColorHint">@android:color/tertiary_text_dark</item>
+    <item android:name="colorAccent">@color/colorAccent</item>
+    <item android:name="colorControlNormal">@android:color/tertiary_text_dark</item>
+    <item android:name="colorControlActivated">@android:color/holo_orange_light</item>
+</selector>

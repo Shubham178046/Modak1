@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu1"
+            android:icon="@mipmap/leftmenu_icon1"
+            android:title="Home"
+            />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu2"
+            android:icon="@mipmap/leftmenu_icon2"
+            android:title="My Profile"/>
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu3"
+            android:icon="@mipmap/leftmenu_icon3"
+            android:title="My Addresses"/>
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu4"
+            android:icon="@mipmap/leftmenu_icon4"
+            android:title="Payment Info"/>
+    </group>
+
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu5"
+            android:icon="@mipmap/leftmenu_icon5"
+            app:actionLayout="@layout/badge_background"
+            android:title="Notification"/>
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu6"
+            android:icon="@mipmap/leftmenu_icon6"
+            android:title="Free Meals"/>
+    </group>
+    <group
+        android:id="@+id/group7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu7"
+            android:icon="@mipmap/leftmenu_icon7"
+            android:title="Settings"/>
+    </group>
+    <group
+        android:id="@+id/group8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu8"
+            android:icon="@mipmap/leftmenu_icon8"
+            android:title="Help"/>
+    </group>
+    <group
+        android:id="@+id/group9"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu9"
+            android:icon="@mipmap/leftmenu_icon9"
+            android:title="Logout"/>
+    </group>
+
+</menu>

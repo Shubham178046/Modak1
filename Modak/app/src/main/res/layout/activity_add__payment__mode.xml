@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llPaymentMethodDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/custom_appbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:background="@color/white_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_scan_your_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_scan_card" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical|center_horizontal|center"
+                        android:paddingLeft="10dp"
+                        android:text="Scan Your Card"
+                        android:textColor="@color/Light_black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_scan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:gravity="center"
+                    android:onClick="onScanPress"
+                    android:paddingLeft="10dp"
+                    android:text="  Scan Your Card"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_color">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Enter Your Credit Card Details"
+                        android:textColor="@color/Light_black"
+                        android:textStyle="bold"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textStyle="bold"
+                        android:text="Card Type"
+                        android:textColor="@color/red_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spin_select_card_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"/>
+                    </LinearLayout>
+                </LinearLayout>
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name on Card"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edt_name_on_card_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@null"
+                        android:hint="Enter Name on Card"
+                        android:textColorHint="@color/black_color"
+                        android:maxLength="60"
+                        android:singleLine="true"
+                        android:textColor="@color/Light_black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_txtbox_signup" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Card No"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="@dimen/sp18" />
+
+                    <EditText
+                        android:id="@+id/edt_card_no_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@null"
+                        android:hint="Enter Card No"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        android:textColorHint="@color/black_color"
+                        android:singleLine="true"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_txtbox_signup" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Expiration Date"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spin_select_month_card_expiration"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+                        <Spinner
+                            android:id="@+id/spin_select_year_card_expiration"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:paddingTop="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:layout_marginRight="5dp"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CVV"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edt_cvv_code_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@null"
+                        android:hint="Enter Security Code"
+                        android:inputType="numberPassword"
+                        android:maxLength="3"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_txtbox_signup" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Billing Zip Code"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/edt_billing_zipcode_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@null"
+                        android:hint="Enter Billing Zip Code"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/line_txtbox_signup" />
+            </LinearLayout>
+                 <LinearLayout
+                     android:id="@+id/upi_id_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:visibility="gone"
+                     android:orientation="vertical"
+                     android:paddingLeft="10dp"
+                     android:paddingTop="8dp">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="UPI ID"
+                         android:textColor="@color/red_color"
+                         android:textSize="18sp" />
+
+                     <EditText
+                         android:id="@+id/edt_upi_id"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="6dp"
+                         android:background="@null"
+                         android:hint="Enter UPI ID"
+                         android:textColorHint="@color/black_color"
+                         android:maxLength="60"
+                         android:singleLine="true"
+                         android:textColor="@color/Light_black"
+                         android:textSize="18dp" />
+                 </LinearLayout>
+
+             </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/ll_save_card_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <CheckBox
+                        android:id="@+id/payment_checkbox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical|center_horizontal|center"
+                        android:paddingLeft="4dp"
+                        android:text="I would like to save my detail for next purchase."
+                        android:textColor="@color/Light_black"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_save_paymnet_method_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_create_ac"
+        android:text="Save"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:textColor="@color/white_color" />
+</RelativeLayout>

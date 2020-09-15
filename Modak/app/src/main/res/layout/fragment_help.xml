@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.Help">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/grey_color"
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+          android:gravity="bottom"
+            android:textColor="@color/black_color"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topic"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/red_color"/>
+        <Spinner
+            android:id="@+id/reason_sppinner"
+            android:layout_width="match_parent"
+            android:paddingTop="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/red_color"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type Comment Here"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/dark_grey"/>
+            <EditText
+                android:id="@+id/comment_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black_color"
+                android:textColor="@color/black_color"
+                android:inputType="text"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/notification_submit_btn"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_submit"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/sp18"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAQ"
+            android:textColor="@color/black_color"
+            android:textSize="25sp"/>
+    </LinearLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_marginTop="10dp"
+    android:id="@+id/faq_recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>

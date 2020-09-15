@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Order_Selection">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_proceed"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/custom_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_main_order_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cart_item_details_order_selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:paddingBottom="5dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="$"
+                                android:textStyle="bold"
+                                android:textColor="@color/Light_black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="450"
+                                android:textStyle="bold"
+                                android:textColor="@color/Light_black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dp"
+                                android:text="("
+                                android:textColor="@color/Light_black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_countamount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="2"
+                                android:textColor="@color/Light_black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text=" Meals)"
+                                android:textColor="@color/Light_black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/delivery_time_order_selection"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center_vertical|center_horizontal|center"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="8dp"
+                                android:text="Delivery(09:30 AM-10:30 PM)"
+                                android:textColor="@color/Yellow"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/Light_black">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Total Amount"
+                                android:textColor="@color/black_color"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right"
+                                android:paddingRight="8dp"
+                                android:text="On Demand"
+                                android:textColor="@color/black_color"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/Light_black">
+
+                            <TextView
+                                android:id="@+id/btn_viewcart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_viewcart_1"
+                                android:gravity="center"
+                                android:text="@string/viewcart"
+                                android:textColor="@color/Light_black"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/bg_change_password"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_color"
+                            android:gravity="left|center_vertical|center_horizontal|center"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/choosemode"
+                                android:textStyle="bold"
+                                android:textColor="@color/Light_black"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/order_dine_in"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:id="@+id/order_dine_in_select"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="bottom"
+                                    android:src="@mipmap/icon_dinein_selected" />
+
+                                <TextView
+                                    android:id="@+id/order_dinein_txt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical|center_horizontal|center"
+                                    android:padding="5dp"
+                                    android:layout_marginLeft="13dp"
+                                    android:text="@string/dinein"
+                                    android:textColor="@color/red_color"
+                                    android:textSize="18dp" />
+
+                                <ImageView
+                                    android:id="@+id/order_dine_in_check"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="5dp"
+                                    android:src="@mipmap/chacked_breakfast_list" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2" />
+
+                            <LinearLayout
+                                android:id="@+id/order_takeout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="15dp"
+                                android:layout_weight="1"
+                                android:gravity="top|right|center_vertical|center_horizontal|center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/order_takeout_select"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/icon_takeout_unselected" />
+
+                                <TextView
+                                    android:id="@+id/order_takeout_txt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical|center_horizontal|center"
+                                    android:padding="5dp"
+                                    android:text="@string/takeout"
+                                    android:textColor="@color/Light_black"
+                                    android:textSize="18dp" />
+
+                                <ImageView
+                                    android:id="@+id/order_takeout_check"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:padding="5dp"
+                                    android:src="@drawable/unchacked_breakfast_list" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/order_delivery"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/order_ll_delivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:id="@+id/order_delivery_select"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="bottom"
+                                        android:src="@mipmap/icon_delivery_unselected" />
+
+                                    <TextView
+                                        android:id="@+id/order_delivery_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:layout_marginLeft="13dp"
+                                        android:gravity="left|center_vertical|center_horizontal|center"
+                                        android:text="@string/delivery"
+                                        android:textSize="18dp" />
+
+                                    <ImageView
+                                        android:id="@+id/order_delivery_check"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:padding="5dp"
+                                        android:layout_marginLeft="14dp"
+                                        android:src="@drawable/unchacked_breakfast_list" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_choose_time_order_selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_color"
+                            android:gravity="left|center_vertical|center_horizontal|center"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/choosetime"
+                                android:textStyle="bold"
+                                android:textColor="@color/Light_black"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_select_time_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:orientation="vertical" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/lv_select_time_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#ffffff"
+                            android:choiceMode="singleChoice"
+                            android:dividerHeight="5dp"
+                            android:fadingEdge="none" />
+
+                        <ScrollView
+                            android:id="@+id/sl_sub"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/list_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" />
+                        </ScrollView>
+
+                        <LinearLayout
+                            android:id="@+id/ll_dine_in_time_selection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:padding="2dp"
+                                android:text="Date:"
+                                android:textColor="@color/Light_black"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_select_time_dine_in"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:hint="Date"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_select_time_dine_in1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:hint="Time"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/line_apply" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:padding="2dp"
+                                android:text="Number of Pax:"
+                                android:textColor="@color/Light_black"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edt_number_pax"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:hint="Number of Pax"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:singleLine="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_select_order_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_color"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_title_select_order"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:text="@string/select_order_title"
+                                android:textColor="@color/Light_black"
+                                android:textSize="@dimen/sp18" />
+
+                            <ImageView
+                                android:id="@+id/add_address_order"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/icon_add" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/dark_grey">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/lv_select_address_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/dark_grey" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edt_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_address"
+                        android:gravity="top"
+                        android:hint="@string/comments"
+                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_create_ac"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/proceed"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white_color"
+            android:textSize="22sp" />
+    </RelativeLayout>
+</LinearLayout>

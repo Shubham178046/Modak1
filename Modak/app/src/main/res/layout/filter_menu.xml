@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main_filter_drawer"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:background="@color/white_color"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_refine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon_refine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Refine"
+                    android:textColor="@color/Light_black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="Reset"
+                    android:textColor="@color/Light_black"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon_reset" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Date"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iv_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_date" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/date_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_filter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Time"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/time_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@color/grey_color"
+            android:orientation="vertical">
+            <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10:00 am to 11:00am"
+                android:textSize="15sp"
+            android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11:00 am to 12:00am"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12:00 am to 01:00pm"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01:00 pm to 02:00pm"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/time_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cuisine_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Cuisines"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/cuisine_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cuisine_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@color/grey_color"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marathi"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rajasthani"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Japanise"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Italian"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spanish"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/cuisine_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/foodtype_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Food Type"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/foodtype_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/food_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@color/grey_color"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="North Indian"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chinese"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="South Indian"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Italian"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/food_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Price"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/price_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:background="@color/grey_color"
+            android:orientation="vertical">
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/abc_seekbar_thumb_material"
+                android:thumbTint="@color/red_color"
+                android:progress="25"
+                android:scaleY="1"
+                android:max="100"
+                style="@style/MyProgressBar"
+                android:progressTint="@color/red_color"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/price_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mode_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Mode"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/mode_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mode_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/grey_color"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dine-In"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home Delivery"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Take-Out"
+                android:textSize="15sp"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/mode_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/distance_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Distance"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/distance_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/distance_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+    <LinearLayout
+        android:id="@+id/distance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@color/grey_color"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radius"
+            android:paddingLeft="15dp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="@color/red_color"
+            android:textSize="20sp"/>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/abc_seekbar_thumb_material"
+            android:thumbTint="@color/red_color"
+            android:progress="25"
+            android:scaleY="1"
+            android:max="100"
+            style="@style/MyProgressBar"
+            android:progressTint="@color/red_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/Zero_miles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 mile"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black_color"/>
+            <TextView
+                android:id="@+id/Five_miles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5 mile"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black_color"/>
+            <TextView
+                android:id="@+id/Twenty_miles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="20 mile"
+                android:textColor="@color/black_color"/>
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sortby_filter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Sort By"
+                android:textColor="@color/Light_black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/sortby_gp_filter_indicatore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical|center_horizontal|center"
+                android:padding="10dp"
+                android:src="@drawable/menu_icon_open" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_txtbox_signup2" />
+        <FrameLayout
+            android:id="@+id/fl_btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/fl_btn_apply_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/popup_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Apply"
+                android:textColor="@color/white_color"
+                android:textSize="20dp" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".Fragment.DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView android:textSize="14dp" android:textStyle="bold" android:id="@+id/tv_detail_item_brief_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp" android:text="The earliest cookbooks on record seem to be mainly lists of recipes for what would now be called haute cuisine, and were often written primarily to either provide a record of the author&apos;s favorite dishes or to train professional cooks for banquets and upper-class, private homes. Many of these cookbooks, therefore, provide only limited sociological or culinary value, as they leave out significant sections of ancient cuisine such as peasant food, breads, and preparations such as vegetable dishes too simple to warrant a recipe."/>
+</LinearLayout>

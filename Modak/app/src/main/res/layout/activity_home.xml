@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/hone_layout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Home">
+
+    <include layout="@layout/appbar_layout" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_layout"
+            android:layout_marginBottom="-3dp" />
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_layout"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <include layout="@layout/layout_check"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:icon="@mipmap/icon_search_nevi"
+    android:id="@+id/search_menu"
+    app:showAsAction="always"
+    android:title="Search"/>
+<item android:icon="@mipmap/icon_filter_nevi"
+    app:showAsAction="always"
+    android:id="@+id/filter_menu"
+    android:title="Filter"/>
+    <item android:icon="@mipmap/icon_cart_nevi"
+        app:showAsAction="always"
+        android:id="@+id/cart_menu"
+        android:title="Cart"/>
+    <item android:id="@+id/add_cards"
+        android:icon="@drawable/icon_add_payment"
+        app:showAsAction="always"
+        android:visible="false"
+        android:title="Add Card"/>
+</menu>
