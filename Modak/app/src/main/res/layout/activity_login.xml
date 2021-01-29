@@ -163,7 +163,8 @@
 
         <Button
             android:id="@+id/btn_facebook"
-            android:layout_width="0dp" android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1.0"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center_horizontal"

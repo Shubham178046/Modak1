@@ -172,7 +172,6 @@ class Add_Payment_Mode : AppCompatActivity() {
                 returnIntent.putExtra("card_name", edt_card_no_payment_method.text.toString())
                 setResult(Activity.RESULT_OK,returnIntent)
                 finish()
-
             }
            }
             else if(flag ==1)

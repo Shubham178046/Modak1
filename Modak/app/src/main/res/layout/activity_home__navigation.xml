@@ -2,21 +2,22 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.Home_Navigation">
 
-<include layout="@layout/activity_home"/>
+    <include layout="@layout/activity_home" />
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navigation_view"
-        android:fitsSystemWindows="true"
         android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         android:scrollbars="none"
+        app:headerLayout="@layout/navigation_header"
         app:itemIconTint="@color/black_color"
         app:itemTextColor="@color/black_color"
-        app:menu="@menu/drawer_menu"
-        app:headerLayout="@layout/navigation_header"/>
+        app:menu="@menu/drawer_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>
